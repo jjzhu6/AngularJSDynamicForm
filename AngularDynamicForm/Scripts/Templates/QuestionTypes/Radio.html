@@ -1,0 +1,8 @@
+﻿<p>{{question.Label}}</p>
+<ul>
+    <li ng-repeat="option in question.Options">
+        <input type="radio" name="{{question.Name}}" id="{{question.Name}}_{{$index}}" ng-model="question.Value" value="{{option.Value}}" />
+        <label for="{{question.Name}}_{{$index}}">{{option.Label}}</label>
+    </li>
+</ul>
+<p>Your answer: {{question.Value}}</p>
