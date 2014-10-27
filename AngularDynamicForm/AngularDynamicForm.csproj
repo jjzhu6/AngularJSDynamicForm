@@ -1026,6 +1026,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Repositories\QuestionRepository.js" />
     <Content Include="Scripts\Templates\QuestionTypes\Radio.html" />
     <Content Include="Scripts\Templates\QuestionTypes\Select.html" />
     <Content Include="Scripts\Templates\QuestionTypes\Text.html" />

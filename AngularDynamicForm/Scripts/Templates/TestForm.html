@@ -1,4 +1,4 @@
 ﻿<form>
-    <div ng-repeat="question in questions" ng-include="question.Include"></div>
+    <div ng-repeat="question in questions" ng-init="includeType = questionTypePath + question.Type + '.html'" ng-include="includeType"></div>
     <button ng-click="">Submit Form</button>
 </form>
