@@ -16,13 +16,13 @@ namespace AngularDynamicForm.Controllers
                 new Question{
                     Name = "Question1",
                     Label = "Please answer my question 1",
-                    Type = QuestionType.Text,
+                    Type = QuestionType.Text.ToString(),
                     Value = ""
                 },
                 new Question{
                     Name = "Question2",
                     Label = "Please select for my question 2",
-                    Type = QuestionType.Select,
+                    Type = QuestionType.Select.ToString(),
                     Value =  "",
                     Options = new List<Option>{
                         new Option{ Value = "Select1", Label = "This is Select 1" },
@@ -34,7 +34,7 @@ namespace AngularDynamicForm.Controllers
                 new Question{
                     Name = "Question3",
                     Label = "Please check my question 3",
-                    Type = QuestionType.Radio,
+                    Type = QuestionType.Radio.ToString(),
                     Value = "",
                     Options = new List<Option>{
                         new Option{ Value = "Radio1", Label = "This is Radio 1" },

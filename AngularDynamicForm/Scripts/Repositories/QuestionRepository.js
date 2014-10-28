@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-dynamicFormApp.factory('questionRepository', function () {
+dynamicFormApp.factory('questionRepository', function ($resource) {
     var questions = [
         {
             Name: "Question1",
@@ -58,9 +58,11 @@ dynamicFormApp.factory('questionRepository', function () {
         }
     ];
 
+    var form = $resource('/api/form/:id');
+
     return {
         getQuestions: function (id) {
-            return questions;
+            return form.get();
         }
     };
 });

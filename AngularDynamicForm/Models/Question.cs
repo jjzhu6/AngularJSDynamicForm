@@ -9,7 +9,7 @@ namespace AngularDynamicForm.Models
     {
         public string Name { get; set; }
         public string Label { get; set; }
-        public QuestionType Type { get; set; }
+        public string Type { get; set; }
         public string Value { get; set; }
         public IEnumerable<Option> Options { get; set; }
     }

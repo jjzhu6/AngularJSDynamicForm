@@ -2,7 +2,10 @@
 
 dynamicFormApp.controller('TestFormController',
     function TestFormController($scope, questionRepository) {
-        $scope.questions = questionRepository.getQuestions();
+        questionRepository.getQuestions().$promise.then(function (data) {
+            $scope.questions = data.Questions;
+        });
+
         $scope.questionTypePath = "/Scripts/Templates/QuestionTypes/";
     }
 );
