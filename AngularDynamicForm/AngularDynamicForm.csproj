@@ -191,6 +191,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201411011439015_Initial.cs" />
+    <Compile Include="Migrations\201411011439015_Initial.Designer.cs">
+      <DependentUpon>201411011439015_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Entities\Response.cs" />
     <Compile Include="Models\Entities\FormContext.cs" />
@@ -1085,6 +1090,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201411011439015_Initial.resx">
+      <DependentUpon>201411011439015_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

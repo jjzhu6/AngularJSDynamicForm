@@ -12,7 +12,6 @@ namespace AngularDynamicForm.Models.Entities
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
 
-        public int FormId { get; set; }
-        public virtual Form Form { get; set; }
+        public virtual IList<Response> Response { get; set; }
     }
 }
