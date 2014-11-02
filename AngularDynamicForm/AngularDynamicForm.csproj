@@ -289,7 +289,7 @@
     <Content Include="Scripts\lib\angular-touch.min.js" />
     <Content Include="Scripts\lib\angular.js" />
     <Content Include="Scripts\lib\angular.min.js" />
-    <Content Include="Scripts\Controllers\TestFormController.js" />
+    <Content Include="Scripts\Controllers\FormController.js" />
     <Content Include="Scripts\apps\dynamic-form-app.js" />
     <Content Include="Scripts\lib\errors.json" />
     <Content Include="Scripts\lib\angular-touch.min.js.map" />
@@ -1049,7 +1049,7 @@
     <Content Include="Scripts\Templates\QuestionTypes\Radio.html" />
     <Content Include="Scripts\Templates\QuestionTypes\Select.html" />
     <Content Include="Scripts\Templates\QuestionTypes\Text.html" />
-    <Content Include="Scripts\Templates\TestForm.html" />
+    <Content Include="Scripts\Templates\Form.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

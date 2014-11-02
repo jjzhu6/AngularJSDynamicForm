@@ -46,7 +46,7 @@ namespace AngularDynamicForm
                         "~/Scripts/lib/angular-sanitize.js",
                         "~/Scripts/apps/dynamic-form-app.js",
                         "~/Scripts/Repositories/QuestionRepository.js",
-                        "~/Scripts/Controllers/TestFormController.js"
+                        "~/Scripts/Controllers/FormController.js"
                         
                         ));
         }

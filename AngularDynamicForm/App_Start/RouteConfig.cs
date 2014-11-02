@@ -14,8 +14,8 @@ namespace AngularDynamicForm
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "TestForm",
-                url: "TestForm",
+                name: "Form",
+                url: "Form",
                 defaults: new { controller = "Home", action = "Index" }
             );
             routes.MapRoute(
