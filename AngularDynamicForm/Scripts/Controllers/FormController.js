@@ -8,8 +8,10 @@ dynamicFormApp.controller('FormController', function FormController($scope, $loc
             $scope.form = data;
         });
 
-        $scope.save = function () {
-            questionRepository.form.save($scope.form);
+        $scope.save = function (form, formName) {
+            if (formName.$valid) {
+                questionRepository.form.save(form);
+            }
         }
     }
 );
