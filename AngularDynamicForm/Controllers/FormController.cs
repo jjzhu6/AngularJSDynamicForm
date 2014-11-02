@@ -44,5 +44,10 @@ namespace AngularDynamicForm.Controllers
 
             return forms;
         }
+
+        public void save(FormViewModel form)
+        {
+            
+        }
     }
 }
