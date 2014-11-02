@@ -1,12 +1,12 @@
 namespace AngularDynamicForm.Migrations
 {
-    using AngularDynamicForm.Models;
-using AngularDynamicForm.Models.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
+    using AngularDynamicForm.Models.Enums;
+    using AngularDynamicForm.Models.Entities;
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<AngularDynamicForm.Models.Entities.FormContext>
     {
