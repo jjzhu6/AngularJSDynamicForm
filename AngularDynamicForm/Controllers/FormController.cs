@@ -32,5 +32,17 @@ namespace AngularDynamicForm.Controllers
             }
             return form;
         }
+
+        public IList<FormItem> GetList()
+        {
+            var forms = new List<FormItem>();
+
+            using (var db = new FormContext())
+            {
+                forms = db.Forms.AsQueryable().Select(f => new FormItem { FormId = f.FormId, Name = f.Name }).ToList();
+            }
+
+            return forms;
+        }
     }
 }

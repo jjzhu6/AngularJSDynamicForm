@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-dynamicFormApp.controller('FormController', function TestFormController($scope, $location, questionRepository) {
+dynamicFormApp.controller('FormController', function FormController($scope, $location, questionRepository) {
         $scope.formId = $location.search().id;
         $scope.questionTypePath = "/Scripts/Templates/QuestionTypes/";
 
