@@ -19,6 +19,11 @@ namespace AngularDynamicForm
                 defaults: new { controller = "Home", action = "Index" }
             );
             routes.MapRoute(
+                name: "SavedForm",
+                url: "SavedForm",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+            routes.MapRoute(
                 name: "FormList",
                 url: "FormList",
                 defaults: new { controller = "Home", action = "Index" }

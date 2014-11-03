@@ -35,6 +35,34 @@ namespace AngularDynamicForm.Controllers
             return form;
         }
 
+        public FormViewModel GetSavedForm(int formId, int respondentId)
+        {
+            var form = new FormViewModel();
+            using (var db = new FormContext())
+            {
+                var respondent = db.Respondents.AsQueryable().Where(r => r.RespondentId == respondentId).FirstOrDefault();
+                form = db.Forms.AsQueryable().Where(f => f.FormId == formId).Select(s => new FormViewModel
+                {
+                    FormId = s.FormId,
+                    Name = s.Name,
+                    RespondentFirstName = respondent.FirstName,
+                    RespondentLastName = respondent.LastName,
+                    RespondentEmailAddress = respondent.EmailAddress,
+                    Questions = s.Questions.OrderBy(q => q.QuestionId).Select(q => new FormQuestion
+                    {
+                        QuestionId = q.QuestionId,
+                        Name = q.Name,
+                        Label = q.Label,
+                        Type = q.Type,
+                        Value = db.Responses.Where(r => r.QuestionId == q.QuestionId && r.RespondentId == respondent.RespondentId).Select(ss => ss.Value).FirstOrDefault(),
+                        Options = q.Options.OrderBy(o => o.OptionId).Select(o => new FormOption { Label = o.Label, Value = o.Value }).ToList()
+                    }).ToList()
+                }
+                ).FirstOrDefault();
+            }
+            return form;
+        }
+
         public IList<FormItem> GetList()
         {
             var forms = new List<FormItem>();

@@ -12,6 +12,11 @@ var dynamicFormApp = angular.module('dynamicFormApp', ['ngResource', 'ngRoute'])
                 templateUrl: '/Scripts/Templates/Form.html',
                 controller: 'FormController'
             })
+        $routeProvider.when('/SavedForm',
+            {
+                templateUrl: '/Scripts/Templates/Form.html',
+                controller: 'SavedFormController'
+            })
         $routeProvider.when('/ResponseList',
             {
                 templateUrl: '/Scripts/Templates/ResponseList.html',
