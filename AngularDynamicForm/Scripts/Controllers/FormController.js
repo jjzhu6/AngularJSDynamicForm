@@ -7,6 +7,8 @@ dynamicFormApp.controller('FormController', function FormController($scope, $loc
         questionRepository.form.get({ id: $scope.formId }).$promise.then(function (data) {
             $scope.form = data;
         });
+        
+        $scope.responseText = "(See Responses)"
 
         $scope.save = function (form, formName) {
             if (formName.$valid) {
