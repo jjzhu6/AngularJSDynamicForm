@@ -2,7 +2,8 @@
 
 dynamicFormApp.factory('questionRepository', function ($resource) {
     var form = $resource('/api/form/:id', null, {
-        getList: { isArray: true }
+        getList: { isArray: true },
+        getResponseList: { isArray: true }
     });
 
     return {

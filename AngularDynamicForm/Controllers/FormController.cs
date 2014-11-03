@@ -19,9 +19,11 @@ namespace AngularDynamicForm.Controllers
             {
                 form = db.Forms.AsQueryable().Where(f => f.FormId == id).Select(s => new FormViewModel
                 {
+                    FormId = s.FormId,
                     Name = s.Name,
                     Questions = s.Questions.OrderBy(q => q.QuestionId).Select(q => new FormQuestion
                     {
+                        QuestionId = q.QuestionId,
                         Name = q.Name,
                         Label = q.Label,
                         Type = q.Type,
@@ -47,7 +49,38 @@ namespace AngularDynamicForm.Controllers
 
         public void save(FormViewModel form)
         {
-            
+            using (var db = new FormContext())
+            {
+                var respodent = new Respondent
+                {
+                    FirstName = form.RespondentFirstName,
+                    LastName = form.RespondentLastName,
+                    EmailAddress = form.RespondentEmailAddress
+                };
+
+                var responses = form.Questions.Select(q => new Response { Value = q.Value, QuestionId = q.QuestionId, Respondent = respodent }).ToList();
+
+                db.Responses.AddRange(responses);
+                db.SaveChanges();
+            }
+        }
+
+        public IList<ResponseItem> GetResponseList(int formId)
+        {
+            var list = new List<ResponseItem>();
+            using (var db = new FormContext())
+            {
+                list = db.Responses.AsQueryable().Where(r => r.Question.FormId == formId).Select(
+                        s => new ResponseItem { 
+                            FormId = s.Question.FormId, 
+                            FormName = s.Question.Form.Name, 
+                            RespondentId = s.RespondentId, 
+                            RespondentName = s.Respondent.FirstName + " " + s.Respondent.LastName, 
+                            RespondentEmail = s.Respondent.EmailAddress 
+                        }
+                    ).Distinct().ToList();
+            }
+            return list;
         }
     }
 }

@@ -7,6 +7,7 @@ namespace AngularDynamicForm.Models
 {
     public class FormQuestion
     {
+        public int QuestionId { get; set; }
         public string Name { get; set; }
         public string Label { get; set; }
         public string Type { get; set; }

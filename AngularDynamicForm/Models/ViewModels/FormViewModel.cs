@@ -7,6 +7,7 @@ namespace AngularDynamicForm.Models.ViewModels
 {
     public class FormViewModel
     {
+        public int FormId { get; set; }
         public string Name { get; set; }
 
         public string RespondentFirstName { get; set; }

@@ -12,6 +12,11 @@ var dynamicFormApp = angular.module('dynamicFormApp', ['ngResource', 'ngRoute'])
                 templateUrl: '/Scripts/Templates/Form.html',
                 controller: 'FormController'
             })
+        $routeProvider.when('/ResponseList',
+            {
+                templateUrl: '/Scripts/Templates/ResponseList.html',
+                controller: 'ResponseListController'
+            })
         $routeProvider.otherwise({ redirectTo: '/FormList' });
         $locationProvider.html5Mode(true);
     });

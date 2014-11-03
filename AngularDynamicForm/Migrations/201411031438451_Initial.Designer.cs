@@ -13,7 +13,7 @@ namespace AngularDynamicForm.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201411011439015_Initial"; }
+            get { return "201411031438451_Initial"; }
         }
         
         string IMigrationMetadata.Source
