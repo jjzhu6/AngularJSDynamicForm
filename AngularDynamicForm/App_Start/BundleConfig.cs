@@ -49,7 +49,8 @@ namespace AngularDynamicForm
                         "~/Scripts/Controllers/FormController.js",
                         "~/Scripts/Controllers/FormListController.js",
                         "~/Scripts/Controllers/SavedFormController.js",
-                        "~/Scripts/Controllers/ResponseListController.js"
+                        "~/Scripts/Controllers/ResponseListController.js",
+                        "~/Scripts/Directives/Question.js"
                         ));
         }
     }

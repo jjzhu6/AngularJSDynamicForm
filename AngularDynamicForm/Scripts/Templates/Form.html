@@ -6,7 +6,7 @@
         <p>Your Last Name: <input type="text" required ng-model="form.RespondentLastName" /></p>
         <p>Your Email: <input type="text" required ng-model="form.RespondentEmailAddress" /></p>
     </div>
-    <h3>Questions</h3>
-    <div ng-repeat="question in form.Questions" ng-init="includeType = questionTypePath + question.Type + '.html'" ng-include="includeType"></div>
+    <h3>Questions</h3>        
+    <question-view ng-repeat="question in form.Questions" question="question" ></question-view>
     <button type="submit" ng-click="save(form, dynamicForm)">Submit Form</button>
 </form>

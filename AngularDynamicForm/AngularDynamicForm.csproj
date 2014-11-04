@@ -271,6 +271,7 @@
     <Content Include="Scripts\Controllers\SavedFormController.js" />
     <Content Include="Scripts\Controllers\ResponseListController.js" />
     <Content Include="Scripts\Controllers\FormListController.js" />
+    <Content Include="Scripts\Directives\Question.js" />
     <Content Include="Scripts\lib\angular-animate.js" />
     <Content Include="Scripts\lib\angular-animate.min.js" />
     <Content Include="Scripts\lib\angular-aria.js" />
