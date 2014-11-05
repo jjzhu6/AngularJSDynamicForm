@@ -34,6 +34,11 @@ namespace AngularDynamicForm
                 defaults: new { controller = "Home", action = "Index" }
             );
             routes.MapRoute(
+                name: "EditStructure",
+                url: "EditStructure",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

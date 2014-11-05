@@ -1,5 +1,14 @@
-﻿<ul>
+﻿<h1>All forms</h1>
+<ul>
     <li ng-repeat="form in forms" >
         <a href="/Form?id={{form.FormId}}" target="_blank">{{form.Name}}</a>
     </li>
 </ul>
+<h1>Add a new Dynamic Form</h1>
+<form>
+    <fieldset>
+        <legend>Add a new Dynamic Form</legend>
+        Form Name: <input type="text" ng-model="newFormName" size="50"><br />
+        <button ng-click="newForm(newFormName)" >Go!</button>
+  </fieldset>
+</form>
