@@ -185,6 +185,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\FormStructureController.cs" />
     <Compile Include="Controllers\FormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -212,6 +213,7 @@
     <Compile Include="Models\ViewModels\FormStructureViewModel.cs" />
     <Compile Include="Models\ViewModels\FormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\EnumHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -1055,6 +1057,7 @@
     <Content Include="Scripts\lib\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\lib\knockout-2.2.0.js" />
     <Content Include="Scripts\lib\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Repositories\StatisticRepository.js" />
     <Content Include="Scripts\Repositories\FormRepository.js" />
     <Content Include="Scripts\Repositories\QuestionRepository.js" />
     <Content Include="Scripts\Templates\EditQuestionTypes\Radio.html" />

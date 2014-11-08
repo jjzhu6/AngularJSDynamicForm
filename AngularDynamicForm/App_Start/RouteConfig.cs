@@ -44,6 +44,11 @@ namespace AngularDynamicForm
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
+                name: "Statistic API",
+                url: "api/statistic/{action}",
+                defaults: new { controller = "Statistic"}
+            );
+            routes.MapRoute(
                 name: "API Default",
                 url: "api/{controller}/{id}",
                 defaults: new { id = UrlParameter.Optional }

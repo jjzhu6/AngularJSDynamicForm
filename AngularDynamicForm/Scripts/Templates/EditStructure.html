@@ -1,2 +1,7 @@
 ﻿<h1>Manage questions</h1>
 <edit-question-view ng-repeat="question in form.Questions" question="question" funcs="editQuestionFuncs" ></edit-question-view>
+
+<h1>+ New question</h1>
+Question Type:
+<select ng-model="newType" ng-options="type for type in questionTypes"></select>
+<button ng-click="addQuestion()">Go!</button>
