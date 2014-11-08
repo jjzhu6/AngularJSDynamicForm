@@ -591,6 +591,22 @@ div.edit-question {
     border-bottom:solid thin #c7d1d6;
 }
 
+#preview-questions {
+    background-color:#fff;
+    position:absolute;
+    width:600px;
+    height:800px;
+    overflow:scroll;
+    left:250px;
+    top:250px;
+    margin:40px;
+    padding:40px;
+}
+
+#preview-questions button.close{
+    float:right;
+}
+
 /********************
 *   Mobile Styles   *
 ********************/
