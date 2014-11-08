@@ -587,6 +587,10 @@ tr.pager td {
 }
 
 
+div.edit-question {
+    border-bottom:solid thin #c7d1d6;
+}
+
 /********************
 *   Mobile Styles   *
 ********************/

@@ -1,0 +1,12 @@
+﻿<h3>Question ({{question.Type}})</h3>
+<input ng-model="question.Label" type="text" name="label_{{question.QuestionId}}" value="{{question.Label}}" />
+<h3>Options</h3>
+<ul>
+    <li ng-repeat="option in question.Options">
+        <input ng-model="option.Label" type="text" name="optionLabel_{{question.QuestionId}}_{{$index}}" value="{{option.Label}}" />
+    </li>
+    <li>
+        <input type="text" ng-model="newOption.Label" name="optionLabel_{{question.QuestionId}}_new" value="" />
+        <button ng-click="funcs.addOption(question.Options, newOption)" >+ Add</button>
+    </li>
+</ul>

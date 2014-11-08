@@ -274,7 +274,8 @@
     <Content Include="Scripts\Controllers\SavedFormController.js" />
     <Content Include="Scripts\Controllers\ResponseListController.js" />
     <Content Include="Scripts\Controllers\FormListController.js" />
-    <Content Include="Scripts\Directives\Question.js" />
+    <Content Include="Scripts\Directives\EditQuestionView.js" />
+    <Content Include="Scripts\Directives\QuestionView.js" />
     <Content Include="Scripts\lib\angular-animate.js" />
     <Content Include="Scripts\lib\angular-animate.min.js" />
     <Content Include="Scripts\lib\angular-aria.js" />
@@ -1056,6 +1057,9 @@
     <Content Include="Scripts\lib\modernizr-2.6.2.js" />
     <Content Include="Scripts\Repositories\FormRepository.js" />
     <Content Include="Scripts\Repositories\QuestionRepository.js" />
+    <Content Include="Scripts\Templates\EditQuestionTypes\Radio.html" />
+    <Content Include="Scripts\Templates\EditQuestionTypes\Select.html" />
+    <Content Include="Scripts\Templates\EditQuestionTypes\Text.html" />
     <Content Include="Scripts\Templates\EditStructure.html" />
     <Content Include="Scripts\Templates\ResponseList.html" />
     <Content Include="Scripts\Templates\FormList.html" />
