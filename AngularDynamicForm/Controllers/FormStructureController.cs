@@ -34,7 +34,8 @@ namespace AngularDynamicForm.Controllers
                 Options = q.Options != null ? q.Options.Select(o => new Option { 
                     QuestionId = q.QuestionId,
                     OptionId = o.OptionId,
-                    Label = o.Label
+                    Label = o.Label,
+                    Value = o.Label
                 }).ToList() : new List<Option>()
             }).ToList() : new List<Question>();
             using (var db = new FormContext())
