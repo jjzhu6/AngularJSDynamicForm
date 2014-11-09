@@ -1,0 +1,11 @@
+﻿<h3>#{{question.Order}} Question ({{question.Type}})</h3>
+<input ng-model="question.Label" type="text" name="label_{{question.QuestionId}}" value="{{question.Label}}" /><br />
+To: XXX<br />
+Line 1: XXX<br />
+Line 2: XXX<br />
+Line 3: XXX<br />
+Suburb: XXX<br />
+State: XX<br />
+Postcode: XXXX
+<button ng-click="funcs.orderUp(question)">Up</button>
+<button ng-click="funcs.orderDown(question)">Down</button>

@@ -1064,10 +1064,12 @@
     <Content Include="Scripts\Repositories\StatisticRepository.js" />
     <Content Include="Scripts\Repositories\FormRepository.js" />
     <Content Include="Scripts\Repositories\QuestionRepository.js" />
+    <Content Include="Scripts\Templates\EditQuestionTypes\Address.html" />
     <Content Include="Scripts\Templates\EditQuestionTypes\Radio.html" />
     <Content Include="Scripts\Templates\EditQuestionTypes\Select.html" />
     <Content Include="Scripts\Templates\EditQuestionTypes\Text.html" />
     <Content Include="Scripts\Templates\EditStructure.html" />
+    <Content Include="Scripts\Templates\QuestionTypes\Address.html" />
     <Content Include="Scripts\Templates\ResponseList.html" />
     <Content Include="Scripts\Templates\FormList.html" />
     <Content Include="Scripts\Templates\QuestionTypes\Radio.html" />

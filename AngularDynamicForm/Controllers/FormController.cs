@@ -107,7 +107,7 @@ namespace AngularDynamicForm.Controllers
                             RespondentName = s.Respondent.FirstName + " " + s.Respondent.LastName, 
                             RespondentEmail = s.Respondent.EmailAddress 
                         }
-                    ).Distinct().ToList();
+                    ).Distinct().OrderByDescending(o => o.RespondentId).ToList();
             }
             return list;
         }

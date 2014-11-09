@@ -9,6 +9,7 @@ namespace AngularDynamicForm.Models.Enums
     {
         Text,
         Select,
-        Radio
+        Radio,
+        Address
     }
 }
