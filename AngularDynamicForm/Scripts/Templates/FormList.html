@@ -3,6 +3,7 @@
     <li ng-repeat="form in forms" >
         {{form.Name}}
         <a href="/Form?id={{form.FormId}}" target="_blank">Open</a>
+        <a href="/ResponseList?id={{form.FormId}}" target="_blank">Responses</a>
         <a href="/EditStructure?id={{form.FormId}}" >Edit</a>
     </li>
 </ul>
