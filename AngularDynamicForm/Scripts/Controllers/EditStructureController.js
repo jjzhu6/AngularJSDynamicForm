@@ -24,7 +24,7 @@ dynamicFormApp.controller('EditStructureController', function EditStructureContr
     $scope.saveFormStructure = function (form) {
         $http.post('/api/formstructure/', form).
                 success(function (data, status, headers, config) {
-                    $location.path('/FormList/');
+                    $location.url($location.path('/FormList/'));
                 });
     }
 });

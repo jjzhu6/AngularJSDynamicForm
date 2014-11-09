@@ -6,8 +6,8 @@ dynamicFormApp.controller('FormListController', function FormListController($sco
         });
         
         $scope.newForm = function (formName) {
-            $http.post('/api/formstructure/', { Name: formName }).
-                success(function(data, status, headers, config) {
+            if (formName !== "" && formName !== null && formName !== undefined)
+                $http.post('/api/formstructure/', { Name: formName }).success(function(data, status, headers, config) {
                     $location.path('/EditStructure/').search('id', data);
                 });
         };

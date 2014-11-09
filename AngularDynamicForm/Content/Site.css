@@ -607,6 +607,18 @@ div.edit-question {
     float:right;
 }
 
+div#addQuestion {
+    background-color:#fff;
+    position:fixed;
+    width:300px;
+    height:60px;
+    overflow:scroll;
+    right:250px;
+    top:5px;
+    margin:40px;
+    padding:40px;
+}
+
 /********************
 *   Mobile Styles   *
 ********************/
