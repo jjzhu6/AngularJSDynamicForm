@@ -197,6 +197,10 @@
     <Compile Include="Migrations\201411031438451_Initial.Designer.cs">
       <DependentUpon>201411031438451_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201411090206172_AddQuestionOrder.cs" />
+    <Compile Include="Migrations\201411090206172_AddQuestionOrder.Designer.cs">
+      <DependentUpon>201411090206172_AddQuestionOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ResponseItem.cs" />
@@ -1119,6 +1123,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201411031438451_Initial.resx">
       <DependentUpon>201411031438451_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411090206172_AddQuestionOrder.resx">
+      <DependentUpon>201411090206172_AddQuestionOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

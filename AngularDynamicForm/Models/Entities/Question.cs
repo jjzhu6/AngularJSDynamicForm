@@ -11,6 +11,7 @@ namespace AngularDynamicForm.Models.Entities
         public string Name { get; set; }
         public string Label { get; set; }
         public string Type { get; set; }
+        public int Order { get; set; }
         public virtual IList<Option> Options { get; set; }
 
         public int FormId { get; set; }

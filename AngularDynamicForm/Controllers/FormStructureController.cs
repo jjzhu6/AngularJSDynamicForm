@@ -28,6 +28,7 @@ namespace AngularDynamicForm.Controllers
             {
                 FormId = formEntity.FormId,
                 QuestionId = q.QuestionId,
+                Order = q.Order,
                 Type = q.Type,
                 Name = q.Name,
                 Label = q.Label,

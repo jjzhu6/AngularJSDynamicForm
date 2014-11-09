@@ -21,16 +21,17 @@ namespace AngularDynamicForm.Controllers
                 {
                     FormId = s.FormId,
                     Name = s.Name,
-                    Questions = s.Questions.OrderBy(q => q.QuestionId).Select(q => new FormQuestion
+                    Questions = s.Questions.OrderBy(q => q.Order).Select(q => new FormQuestion
                     {
                         QuestionId = q.QuestionId,
+                        Order = q.Order,
                         Name = q.Name,
                         Label = q.Label,
                         Type = q.Type,
                         Options = q.Options.OrderBy(o => o.OptionId).Select(o => new FormOption { OptionId = o.OptionId, Label = o.Label, Value = o.Value }).ToList()
                     }).ToList()
                 }
-                ).FirstOrDefault();                         
+                ).FirstOrDefault();
             }
             return form;
         }

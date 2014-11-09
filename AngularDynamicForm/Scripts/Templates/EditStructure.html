@@ -1,6 +1,6 @@
 ﻿<a href="/FormList">Back to list</a>
 <h1>Manage questions</h1>
-<edit-question-view ng-repeat="question in form.Questions" question="question" funcs="editQuestionFuncs" ></edit-question-view>
+<edit-question-view ng-repeat="question in form.Questions | orderBy : 'Order'" question="question" funcs="editQuestionFuncs" ></edit-question-view>
 
 <button ng-click="saveFormStructure(form)">Save</button>
 <button ng-click="showPreview = !showPreview">Preview</button>
