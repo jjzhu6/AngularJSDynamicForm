@@ -27,7 +27,7 @@ namespace AngularDynamicForm.Controllers
                         Name = q.Name,
                         Label = q.Label,
                         Type = q.Type,
-                        Options = q.Options.OrderBy(o => o.OptionId).Select(o => new FormOption { Label = o.Label, Value = o.Value }).ToList()
+                        Options = q.Options.OrderBy(o => o.OptionId).Select(o => new FormOption { OptionId = o.OptionId, Label = o.Label, Value = o.Value }).ToList()
                     }).ToList()
                 }
                 ).FirstOrDefault();                         

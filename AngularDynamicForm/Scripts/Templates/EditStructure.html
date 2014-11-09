@@ -1,5 +1,7 @@
 ﻿<h1>Manage questions</h1>
 <edit-question-view ng-repeat="question in form.Questions" question="question" funcs="editQuestionFuncs" ></edit-question-view>
+
+<button ng-click="saveFormStructure(form)">Save</button>
 <button ng-click="showPreview = !showPreview">Preview</button>
 
 <h1>+ New question</h1>

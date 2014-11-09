@@ -13,16 +13,44 @@ namespace AngularDynamicForm.Controllers
 {
     public class FormStructureController : ApiController
     {
-        public int save(Form form)
+        public int save(FormViewModel form)
         {
+            var formEntity = new Form { Name = form.Name, FormId = form.FormId };
+
             using (var db = new FormContext())
             {
-                db.Entry(form).State = form.FormId == 0 ?
+                db.Entry(formEntity).State = formEntity.FormId == 0 ?
                                    EntityState.Added :
                                    EntityState.Modified; 
                 db.SaveChanges();
             }
-            return form.FormId;
+            var questions = form.Questions != null ? form.Questions.Select(q => new Question
+            {
+                FormId = formEntity.FormId,
+                QuestionId = q.QuestionId,
+                Type = q.Type,
+                Name = q.Name,
+                Label = q.Label,
+                Options = q.Options != null ? q.Options.Select(o => new Option { 
+                    QuestionId = q.QuestionId,
+                    OptionId = o.OptionId,
+                    Label = o.Label
+                }).ToList() : new List<Option>()
+            }).ToList() : new List<Question>();
+            using (var db = new FormContext())
+            {
+                questions.ForEach(q => {
+                    db.Entry(q).State = q.QuestionId == 0 ?
+                                   EntityState.Added :
+                                   EntityState.Modified;
+                    q.Options.ToList().ForEach(o => db.Entry(o).State = o.OptionId == 0 ?
+                                   EntityState.Added :
+                                   EntityState.Modified);
+                });
+                db.SaveChanges();
+            }
+
+            return formEntity.FormId;
         }
     }
 }

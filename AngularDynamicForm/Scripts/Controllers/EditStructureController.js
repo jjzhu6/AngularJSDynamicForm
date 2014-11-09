@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-dynamicFormApp.controller('EditStructureController', function EditStructureController($scope, $location, formRepository, questionRepository, statisticRepository) {
+dynamicFormApp.controller('EditStructureController', function EditStructureController($scope, $http, $location, formRepository, questionRepository, statisticRepository) {
     $scope.formId = $location.search().id;
     $scope.questionTypes = statisticRepository.questionTypes;
     $scope.form = questionRepository.form.get({ id: $scope.formId });
@@ -20,4 +20,11 @@ dynamicFormApp.controller('EditStructureController', function EditStructureContr
             newOption.Label = "";
         }
     };
+
+    $scope.saveFormStructure = function (form) {
+        $http.post('/api/formstructure/', form).
+                success(function (data, status, headers, config) {
+                    $location.path('/FormList/');
+                });
+    }
 });

@@ -593,12 +593,12 @@ div.edit-question {
 
 #preview-questions {
     background-color:#fff;
-    position:absolute;
+    position:fixed;
     width:600px;
     height:800px;
     overflow:scroll;
     left:250px;
-    top:250px;
+    top:20px;
     margin:40px;
     padding:40px;
 }
