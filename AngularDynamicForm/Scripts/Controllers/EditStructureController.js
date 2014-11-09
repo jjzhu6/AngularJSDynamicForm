@@ -9,7 +9,8 @@ dynamicFormApp.controller('EditStructureController', function EditStructureContr
 
     $scope.addQuestion = function () {
         if ($scope.newType !== null && $scope.newType !== "" && $scope.newType !== undefined) {
-            $scope.form.Questions.push({ Type: $scope.newType, Options: [] });
+            var questionCount = $scope.form.Questions.length;
+            $scope.form.Questions.push({ Type: $scope.newType, Order: questionCount + 1, Options: [] });
             $scope.newType = "";
         }
     }

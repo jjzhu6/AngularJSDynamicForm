@@ -23,12 +23,14 @@ namespace AngularDynamicForm.Migrations
                 Questions = new List<Question> {
                                             new Question{
                                                 Name = "Question1",
+                                                Order = 1,
                                                 Label = "Please answer my question 1",
                                                 Type = QuestionType.Text.ToString(),
                                                 Options = null
                                             },
                                             new Question{
                                                 Name = "Question2",
+                                                Order = 2,
                                                 Label = "Please select for my question 2",
                                                 Type = QuestionType.Select.ToString(),
                                                 Options = new List<Option>{
@@ -40,6 +42,7 @@ namespace AngularDynamicForm.Migrations
                                             },
                                             new Question{
                                                 Name = "Question3",
+                                                Order = 3,
                                                 Label = "Please check my question 3",
                                                 Type = QuestionType.Radio.ToString(),
                                                 Options = new List<Option>{
